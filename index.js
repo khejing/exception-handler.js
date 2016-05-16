@@ -10,4 +10,17 @@ function removeUserInfoForExceptionHandler(){
   bughd('removeUser');
 }
 
-export {setUserInfoForExceptionHandler, removeUserInfoForExceptionHandler};
+function notifyException(e, customObj){
+  bughd('notifyException', e, customObj);
+}
+
+function notifyError(category, errorMessage){
+  bughd('notify', category, errorMessage);
+}
+
+export {
+  setUserInfoForExceptionHandler,
+  removeUserInfoForExceptionHandler,
+  notifyException,
+  notifyError
+};
